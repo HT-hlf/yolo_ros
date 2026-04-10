@@ -1,6 +1,6 @@
 # yolo_ros
 
-提供了一个基于PyTorch-YOLO的[PyTorch-YOLO](https://github.com/ultralytics/ultralytics)的ROS功能包。已测试可跑
+提供了一个基于PyTorch-YOLO的[PyTorch-YOLO](https://github.com/ultralytics/ultralytics)的ROS功能包
 
 # 运行环境：
 - 20.04
@@ -23,13 +23,9 @@ pip install rospkg
 
 ```
 cd catkin_ws/src
-
-git clone 
-
+git clone https://github.com/HT-hlf/yolo_ros.git
 cd ..
-
 catkin_make
-
 ```
 
 # 使用
@@ -40,11 +36,21 @@ catkin_make
 
 - 启动仿真环境和机器人
 
+  ```
+  source devel/setup.bash
+  roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+  ```
+
 - 启动ros_yolo节点
 
   ```
-  roslaunch yolov8_ros yolo_v8.launch
+  source devel/setup.bash
+  roslaunch yolo_ros yolo.launch
   ```
+
+![1775750686658](README_CN.assets/1775750802757.png)
+
+​							![1775750875348](README_CN.assets/1775750875348.png)
 
 ### 录制数据集中使用
 
@@ -61,9 +67,28 @@ catkin_make
   roslaunch yolo_ros yolo_kitti.launch
   ```
 
-  ​
+  ![](README_CN.assets/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-09%20214157.png)
+  
+  ![屏幕截图 2026-04-09 214316](README_CN.assets/屏幕截图 2026-04-09 214316-1775790928586.png)
 
 ## 使用YOLO检测图像中物体并计算其三维坐标
 
+- 启动仿真环境和机器人
 
+  ```
+  source devel/setup.bash
+  roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
+  ```
 
+- 启动ros_yolo3D节点
+
+  ```
+  source devel/setup.bash
+  roslaunch yolo_ros yolo_3D.launch
+  ```
+
+  ​	
+
+  ![](README_CN.assets/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-09%20212346.png)
+
+  ![屏幕截图 2026-04-09 212443](README_CN.assets/屏幕截图 2026-04-09 212443.png)

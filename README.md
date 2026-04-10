@@ -70,7 +70,7 @@ Provides a ROS package based on PyTorch-YOLO.
 
   ![](README_CN.assets/%E5%B1%8F%E5%B9%95%E6%88%AA%E5%9B%BE%202026-04-09%20214157.png)
 
-  ![屏幕截图 2026-04-09 214316](../屏幕截图 2026-04-09 214316.png)
+  ![屏幕截图 2026-04-09 214316](README.assets/屏幕截图 2026-04-09 214316.png)
 
 ## Use YOLO to Detect Objects in Images and Calculate Their 3D Coordinates
 
@@ -81,7 +81,7 @@ Provides a ROS package based on PyTorch-YOLO.
   roslaunch turtlebot3_gazebo turtlebot3_empty_world.launch
   ```
 
-- Start the ros_yolo node:
+- Start the ros_yolo3D node:
 
   ```
   source devel/setup.bash
